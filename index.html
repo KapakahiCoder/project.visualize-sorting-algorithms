@@ -3,16 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Code Chrysalis</title>
+    <link rel="stylesheet" href="../index.css" />
+    <script src="app.js"></script>
+    <title>Insertion Sorting Algorithm</title>
   </head>
 
   <body>
     <div id="title"></div>
-    <form>
-      <label for="name">Name</label>
-      <input type="text" id="name" placeholder="Engineering?" />
-      <input type="submit" />
-    </form>
+    <div class="greenBoxContainer">
+      <div class="greenBox">
+        <input type="text" placeholder="How many gators..." id="myInput" />
+        <button type="button" onclick="createRandomArray();">
+          Unleash Gators!
+        </button>
+      </div>
+    </div>
+    <div class="blue" id="blueDiv"></div>
+
     <!--
     Where is this public/bundle.js file coming from?
     It comes from our trusty friend, webpack.

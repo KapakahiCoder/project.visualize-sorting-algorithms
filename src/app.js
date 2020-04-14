@@ -12,6 +12,17 @@ require("./index.css");
 const sort = new Sort();
 sort.sort();
 
+const createRandomArray = () => {
+  let result = [];
+  let num = document.getElementById("myInput").value;
+  for (let i = 0; i < num; i++) {
+    result.push(Math.floor(Math.random() * 101));
+  }
+  let gators = document.getElementById("blueDiv");
+  gators.textContent = result;
+  return result;
+};
+
 function createCheesyTitle(slogan) {
   const container = document.createElement("h1");
   const textNode = document.createTextNode(slogan);

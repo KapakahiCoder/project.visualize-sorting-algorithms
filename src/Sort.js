@@ -3,15 +3,15 @@ class SomeKindOfSort {
     this.array = array;
   }
 
-  sort(inputArray) {
+  sort() {
+    let inputArray = this.array;
     for (let i = 1; i < inputArray.length; i++) {
-      let key = inputArray[i];
-      let j = i - 1;
-      while (j >= 0 && inputArray[j] > key) {
-        inputArray[j + 1] = inputArray[j];
-        j = j - 1;
+      for (let j = 0; j < i; j++) {
+        if (inputArray[i] < inputArray[j]) {
+          let temp = inputArray.splice(i, 1);
+          inputArray.splice(j, 0, temp[0]);
+        }
       }
-      inputArray[j + 1] = key;
     }
     return inputArray;
   }
